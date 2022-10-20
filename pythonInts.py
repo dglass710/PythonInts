@@ -12,16 +12,18 @@ def main(mode = ''):
         return
     for power in range(10):
         if mode == '':
-            print(f"int list of length {power+1}, {['int' for _ in range(power + 1)]}, has MAX_INT: {2**(30*(power+1))-1}")
+            print(f"int list of length {power+1}, {['int '+str(power-significance) for significance in range(power + 1)]}, has MAX_INT: {2**(30*(power+1))-1}")
         elif mode == 'C':
-            print(f"int list of length {power+1}, {['int' for _ in range(power + 1)]}, has MAX_INT: {cn(2**(30*(power+1))-1)}")
+            print(f"int list of length {power+1}, {['int '+str(power-significance) for significance in range(power + 1)]}, has MAX_INT: {cn(2**(30*(power+1))-1)}")
         elif mode == 'W':
-            print(f"int list of length {power+1}, {['int' for _ in range(power + 1)]}, has MAX_INT: {sn(2**(30*(power+1))-1)}")
+            print(f"int list of length {power+1}, {['int '+str(power-significance) for significance in range(power + 1)]}, has MAX_INT: {sn(2**(30*(power+1))-1)}")
         elif mode == 'P':
-            print(f"int list of length {power+1}, {['int' for _ in range(power + 1)]}, has MAX_INT:  2^{30*(power+1)} - 1")
+            print(f"int list of length {power+1}, {['int '+str(power-significance) for significance in range(power + 1)]}, has MAX_INT:  2^{30*(power+1)} - 1")
 
 # Example Usage:
 # main()
 # main('C')
 # main('W')
 # main('P')
+
+
